@@ -24,7 +24,7 @@ class Create extends Component {
     onSubmit = (e) => {
         e.preventDefault();
         const {name, email, password} = this.state;
-        axios.post('/api/users/', {name, email, password})
+        axios.post('http://localhost:4000/api/users/', {name, email, password})
             .then((result) => {
                 localStorage.setItem('jwtToken', ( 'Bearer ' + result.data.token));
                 this.props.history.push("/")

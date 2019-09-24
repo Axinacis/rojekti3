@@ -14,7 +14,7 @@ class List extends Component {
 
     componentDidMount() {
         axios.defaults.headers.common['Authorization'] = localStorage.getItem('jwtToken');
-        axios.get('/api/book')
+        axios.get('http://localhost:4000/api/book')
             .then(res => {
                 this.setState({books: res.data});
                 console.log(this.state.books);
@@ -27,7 +27,7 @@ class List extends Component {
     }
 
     logout = () => {
-        axios.post('/api/users/logout')
+        axios.post('http://localhost:4000/api/users/logout')
             .then(res => {
                 localStorage.removeItem('jwtToken');
                 window.location.reload();

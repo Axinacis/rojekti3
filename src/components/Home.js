@@ -6,7 +6,7 @@ class Home extends Component {
 
     componentDidMount() {
         axios.defaults.headers.common['Authorization'] = localStorage.getItem('jwtToken');
-        axios.get('/api/book')
+        axios.get('http://localhost:4000/api/book')
             .then(res => {
                 console.log('Home');
             })

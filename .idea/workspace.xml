@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2736889-10ac-40d3-be4f-8abbfe8b80c1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/models/book.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/models/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/DB.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/api/node_modules/body-parser/index.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/api/node_modules/body-parser/lib/read.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/api/node_modules/body-parser/lib/types/json.js" afterDir="false" />
@@ -192,27 +187,19 @@
       <change afterPath="$PROJECT_DIR$/api/node_modules/mongoose/tools/auth.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/api/node_modules/mongoose/tools/repl.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/api/node_modules/mongoose/tools/sharded.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/routes/book.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/routes/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Create.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Edit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Footer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Footer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/List.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Register.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Show.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Create.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Create.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/List.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Show.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Show.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -283,8 +270,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1569317070336</updated>
-      <workItem from="1569317073695" duration="1855000" />
+      <workItem from="1569317073695" duration="2672000" />
     </task>
+    <task id="LOCAL−00001" summary="try number one">
+      <created>1569318973785</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1569318973785</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,5 +297,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="try number one" />
+    <option name="LAST_COMMIT_MESSAGE" value="try number one" />
   </component>
 </project>

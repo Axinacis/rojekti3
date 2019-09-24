@@ -27,7 +27,7 @@ class Create extends Component {
         e.preventDefault();
         const { isbn, title, author, description, published_date, publisher } = this.state;
 
-        axios.post('/api/book', { isbn, title, author, description, published_date, publisher })
+        axios.post('http://localhost:4000/api/book', { isbn, title, author, description, published_date, publisher })
             .then((result) => {
                 this.props.history.push("/books")
             });

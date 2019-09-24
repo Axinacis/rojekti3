@@ -4,16 +4,17 @@ const mongoose = require('mongoose');
 const bookRouter = require('./routes/book');
 const userRouter = require('./routes/user');
 // const path = require('path');
+const config = require('./DB.js');
 const app = express();
 
-mongoose.connect(process.env.MONGODB_URL, {
+mongoose.connect(config.DB, {
     useNewUrlParser: true,
     useFindAndModify: false,
     useCreateIndex: true
 }).then(() => console.log('connection successful'))
     .catch((err) => console.error(err));
 
-const port = normalizePort(process.env.PORT || '3000');
+const port = normalizePort(process.env.PORT || '4000');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({'extended':'false'}));

@@ -12,7 +12,7 @@ class Show extends Component {
     }
 
     componentDidMount() {
-        axios.get('/api/book/'+this.props.match.params.id)
+        axios.get('http://localhost:4000/api/book/'+this.props.match.params.id)
             .then(res => {
                 const x = res.data;
                 x.published_date = x.published_date.toString().split('T')[0]
@@ -23,7 +23,7 @@ class Show extends Component {
 
     delete(id){
         console.log(id);
-        axios.delete('/api/book/'+id)
+        axios.delete('http://localhost:4000/api/book/'+id)
             .then((result) => {
                 this.props.history.push("/")
             });
