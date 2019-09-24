@@ -8,6 +8,7 @@ function Header() {
             <li><a href="/">Home</a></li>
             <li><a href="/list">Book list</a></li>
             <li><a href="/search">Search</a></li>
+            <li><a href="/create">Add book</a></li>
         </ul>
     );
 }

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
-import {Link} from 'react-router-dom';
+import {Router} from 'react-router-dom';
 import './login.css';
 
 class Create extends Component {
@@ -24,10 +24,11 @@ class Create extends Component {
     onSubmit = (e) => {
         e.preventDefault();
         const {name, email, password} = this.state;
-        axios.post('http://localhost:4000/api/users/', {name, email, password})
+        axios.post('http://localhost:3000/users/', {name, email, password})
             .then((result) => {
                 localStorage.setItem('jwtToken', ( 'Bearer ' + result.data.token));
                 this.props.history.push("/")
+                // Router.replace("/");
             });
     };
 

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import {Link} from 'react-router-dom';
+import {Router} from 'react-router-dom';
 import axios from 'axios';
 
 class List extends Component {
@@ -14,20 +15,22 @@ class List extends Component {
 
     componentDidMount() {
         axios.defaults.headers.common['Authorization'] = localStorage.getItem('jwtToken');
-        axios.get('http://localhost:4000/api/book')
+        axios.get('http://localhost:3000/books')
             .then(res => {
                 this.setState({books: res.data});
                 console.log(this.state.books);
             })
             .catch((error) => {
-                if (error.response.status === 401) {
-                    this.props.history.push("/login");
-                }
+                console.log(error.response)
+                /*if (error.response.status === 401) {
+                    // this.props.history.push("/login");
+                    Router.replace("/login");
+                }*/
             });
     }
 
     logout = () => {
-        axios.post('http://localhost:4000/api/users/logout')
+        axios.post('http://localhost:3000/users/logout')
             .then(res => {
                 localStorage.removeItem('jwtToken');
                 window.location.reload();

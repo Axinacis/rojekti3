@@ -4,7 +4,7 @@ const auth = require('../auth');
 
 const bookRouter = new express.Router();
 
-bookRouter.post('/', auth, async (req, res) => {
+bookRouter.post('/books/', auth, async (req, res) => {
     try {
         const book = await Book.create(req.body)
         await book.save();
@@ -14,7 +14,7 @@ bookRouter.post('/', auth, async (req, res) => {
     }
 });
 
-bookRouter.get('/:id', auth, async (req, res) => {
+bookRouter.get('/books/:id', auth, async (req, res) => {
     const _id = req.params.id;
     try {
         const book = await Book.findById({_id});
@@ -24,7 +24,7 @@ bookRouter.get('/:id', auth, async (req, res) => {
     }
 });
 
-bookRouter.get('/', auth, async (req, res) => {
+bookRouter.get('/books/', auth, async (req, res) => {
     const match = {};
     const mySort = {};
 
@@ -58,7 +58,7 @@ bookRouter.get('/', auth, async (req, res) => {
 });
 
 
-bookRouter.delete('/:id', auth, async (req, res) => {
+bookRouter.delete('/books/:id', auth, async (req, res) => {
     try {
         const book = await Book.findOneAndDelete({_id: req.params.id});
         if (!book) {
@@ -70,7 +70,7 @@ bookRouter.delete('/:id', auth, async (req, res) => {
     }
 });
 
-bookRouter.patch('/:id', auth, async (req, res) => {
+bookRouter.patch('/books/:id', auth, async (req, res) => {
     const updates = Object.keys(req.body);
     const allowedUpdates = ['isbn', 'title', 'author', 'description', 'published_date', 'publisher'];
     const isValid = updates.every((update) => allowedUpdates.includes(update));

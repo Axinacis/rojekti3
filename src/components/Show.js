@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+// const router = require("react-router-dom").BrowserRouter;
 
 class Show extends Component {
 
@@ -12,7 +13,7 @@ class Show extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:4000/api/book/'+this.props.match.params.id)
+        axios.get('http://localhost:3000/books/'+this.props.match.params.id)
             .then(res => {
                 const x = res.data;
                 x.published_date = x.published_date.toString().split('T')[0]
@@ -23,9 +24,10 @@ class Show extends Component {
 
     delete(id){
         console.log(id);
-        axios.delete('http://localhost:4000/api/book/'+id)
+        axios.delete('http://localhost:3000/books/'+id)
             .then((result) => {
                 this.props.history.push("/")
+                // router.replace("/");
             });
     }
 

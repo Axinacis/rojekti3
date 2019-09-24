@@ -12,7 +12,7 @@ class Edit extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:4000/api/book/'+this.props.match.params.id)
+        axios.get('http://localhost:3000/books/'+this.props.match.params.id)
             .then(res => {
                 this.setState({ book: res.data });
                 console.log(this.state.book);
@@ -30,7 +30,7 @@ class Edit extends Component {
 
         const { isbn, title, author, description, published_date, publisher } = this.state.book;
 
-        axios.put('http://localhost:4000/api/book/'+this.props.match.params.id, { isbn, title, author, description, published_date, publisher })
+        axios.put('http://localhost:3000/books/'+this.props.match.params.id, { isbn, title, author, description, published_date, publisher })
             .then((result) => {
                 this.props.history.push("/show/"+this.props.match.params.id)
             });

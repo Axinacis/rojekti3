@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './login.css';
+// const router = require("react-router-dom").BrowserRouter;
 
 class Login extends Component {
 
@@ -25,11 +26,15 @@ class Login extends Component {
 
         const { email, password } = this.state;
 
-        axios.post('http://localhost:4000/api/users/login', { email, password })
+        axios.post('http://localhost:3000/users/login', { email, password })
             .then((result) => {
                 localStorage.setItem('jwtToken', ( 'Bearer ' + result.data.token));
+                console.log(result.data)
+                console.log(result.data.token)
+                console.log(localStorage.getItem('jwtToken'))
                 this.setState({ message: 'Logged in' });
                 this.props.history.push('/')
+                // router.replace("/");
             })
             .catch((error) => {
                 if(error.response.status === 401) {
